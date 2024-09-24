@@ -1,5 +1,4 @@
 const robot = require('@hurdlegroup/robotjs')
-const prolog = require('tau-prolog')
 const dotenv = require('dotenv')
 
 dotenv.config()
@@ -25,7 +24,7 @@ const searchGoogle = (query) => {
             robot.typeString(`${query}`);
             robot.keyTap('enter');
         }, process.env.ENTER_DELAY);
-    } , process.env.ENTER_DELAY);
+    }, process.env.ENTER_DELAY);
 };
 
 const openApplication = (appName) => {
@@ -36,5 +35,8 @@ const openApplication = (appName) => {
     }, process.env.ENTER_DELAY);
 }
 
-// chatBot("buscar OpenAI");
-chatBot("abrir notepad");
+module.exports = {
+    chatBot,
+    searchGoogle,
+    openApplication,
+}

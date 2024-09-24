@@ -1,21 +1,40 @@
 % preguntas iniciales
-preguntaLV1(frase('quiero buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar algo internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar en internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('quiero buscar algo'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar algo'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('internet'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('buscar'), respuesta('¿Qué quieres buscar?')).
-preguntaLV1(frase('quiero redactar texto'), respuesta('Bien, ¡abriré el bloc de notas!')).
-preguntaLV1(frase('redactar texto'), respuesta('Bien, ¡abriré el bloc de notas!')).
-preguntaLV1(frase('redactar'), respuesta('Bien, ¡abriré el bloc de notas!')).
-preguntaLV1(frase('texto'), respuesta('Bien, ¡abriré el bloc de notas!')).
-preguntaLV1(frase('redactar nuevo documento'), respuesta('Bien, ¡abriré word!')).
-preguntaLV1(frase('redactar documento'), respuesta('Bien, ¡abriré word!')).
-preguntaLV1(frase('nuevo documento'), respuesta('Bien, ¡abriré word!')).
-preguntaLV1(frase('documento'), respuesta('Bien, ¡abriré word!')).
+conversar(frase('quiero buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar algo internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar en internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('quiero buscar algo'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar algo'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('internet'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('buscar'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('navegador'), respuesta('¿Qué quieres buscar?')).
+conversar(frase('quiero redactar texto'), respuesta('bloc de notas')).
+conversar(frase('redactar texto'), respuesta('bloc de notas')).
+conversar(frase('redactar'), respuesta('bloc de notas')).
+conversar(frase('quiero escribir texto'), respuesta('bloc de notas')).
+conversar(frase('escribir texto'), respuesta('bloc de notas')).
+conversar(frase('escribir'), respuesta('bloc de notas')).
+conversar(frase('texto'), respuesta('bloc de notas')).
+conversar(frase('redactar nuevo documento'), respuesta('word')).
+conversar(frase('redactar documento'), respuesta('word')).
+conversar(frase('escribir nuevo documento'), respuesta('word')).
+conversar(frase('escribir documento'), respuesta('word')).
+conversar(frase('nuevo documento'), respuesta('word')).
+conversar(frase('documento'), respuesta('word')).
+conversar(frase('abrir aplicacion'), respuesta('¿Qué aplicación?')).
+conversar(frase('aplicacion'), respuesta('¿Qué aplicación?')).
+conversar(frase('abrir app'), respuesta('¿Qué aplicación?')).
+conversar(frase('app'), respuesta('¿Qué aplicación?')).
+conversar(frase('monitorear directorio'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('organizar directorio'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('organización directorio'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('organizacion directorio'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('organizacion json'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('organizar json'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('monitorear json'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('monitoreo json'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('json'), respuesta('¿Cuál es el directorio?')).
 
 % busqueda
-busqueda(Texto, Respuesta) :- atom_concat('Buscando: ', Texto, Respuesta).
+preguntaAbierta(Texto, Respuesta) :- Respuesta = Texto.
