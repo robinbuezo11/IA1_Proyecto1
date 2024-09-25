@@ -17,10 +17,34 @@ h2,h1{
 	max-width: 65%; 
 	word-wrap: break-word; 
 	text-align: right;
+	border-radius: 10px 10px 0 10px;
 }
 
 .receive-msg {
 	max-width: 65%; 
 	word-wrap: break-word; 
 	text-align: left;
+	border-radius: 10px 10px 10px 0;
+}
+
+.send-msg::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+	bottom: 4px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    border-right: 10px solid transparent;
+}
+
+.receive-msg::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    bottom: 4px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    border-left: 10px solid transparent;
 }

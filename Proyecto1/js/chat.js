@@ -8,7 +8,7 @@ function sendMessage(){
     $(`#chat`).append(`
         <li class="list-group-item bg-transparent border-0 p-0">
             <div class="d-flex justify-content-end">
-                <div class="send-msg bg-primary opacity-75 text-light rounded-3 py-2 px-3 my-1">
+                <div class="send-msg bg-primary opacity-75 text-light py-2 px-3 my-1">
                     ${msg}
                 </div>
             </div>
@@ -22,7 +22,7 @@ function receiveMessage(msg){
     $(`#chat`).append(`
         <li class="list-group-item bg-transparent border-0 p-0">
             <div class="d-flex justify-content-start">
-                <div class="receive-msg bg-secondary text-light rounded-3 py-2 px-3 my-1">
+                <div class="receive-msg bg-secondary text-light py-2 px-3 my-1">
                     ${msg}
                 </div>
             </div>
