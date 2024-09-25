@@ -85,7 +85,7 @@ const abrirAplicacion = (input) => {
 }
 
 const organizar = (input) => {
-    const destinatario = '3058184570301@ingenieria.usac.edu.gt'; // Cambiar por el destinatario real
+    const destinatario = '3058184570301@ingenieria.usac.edu.gt'; 
     const directorio = input; // El directorio ingresado por el usuario
     
     // Verificar si es un directorio válido y luego proceder con la función

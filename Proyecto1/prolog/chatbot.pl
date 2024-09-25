@@ -1,4 +1,4 @@
-% preguntas iniciales
+% respuestas para frases reconocidas
 conversar(frase('quiero buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
 conversar(frase('buscar algo en internet'), respuesta('¿Qué quieres buscar?')).
 conversar(frase('buscar algo internet'), respuesta('¿Qué quieres buscar?')).
@@ -37,6 +37,8 @@ conversar(frase('monitoreo json'), respuesta('¿Cuál es el directorio?')).
 conversar(frase('json'), respuesta('¿Cuál es el directorio?')).
 conversar(frase('reportar jsons'), respuesta('¿Cuál es el directorio?')). % Solicita el directorio
 
-
 % busqueda
 preguntaAbierta(Texto, Respuesta) :- Respuesta = Texto.
+
+% Manejo de frases no reconocidas
+conversar(frase(_), respuesta('Lo siento, no entiendo lo que quieres decir. ¿Puedes intentar otra cosa?')).
