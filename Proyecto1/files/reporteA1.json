@@ -1,0 +1,142 @@
+[
+    {
+        "id": 1,
+        "cliente": "Juan Pérez",
+        "producto": "Laptop",
+        "cantidad": 1,
+        "totalVenta": 1000.00
+    },
+    {
+        "id": 2,
+        "cliente": "Ana Gómez",
+        "producto": "Mouse",
+        "cantidad": 2,
+        "totalVenta": 40.00
+    },
+    {
+        "id": 3,
+        "cliente": "Carlos Díaz",
+        "producto": "Teclado",
+        "cantidad": 1,
+        "totalVenta": 50.00
+    },
+    {
+        "id": 4,
+        "cliente": "Sofía Ruiz",
+        "producto": "Monitor",
+        "cantidad": 1,
+        "totalVenta": 300.00
+    },
+    {
+        "id": 5,
+        "cliente": "Luis Ramírez",
+        "producto": "Laptop",
+        "cantidad": 1,
+        "totalVenta": 1200.00
+    },
+    {
+        "id": 6,
+        "cliente": "María Torres",
+        "producto": "Cargador",
+        "cantidad": 1,
+        "totalVenta": 30.00
+    },
+    {
+        "id": 7,
+        "cliente": "Miguel Ángel",
+        "producto": "Disco Duro",
+        "cantidad": 1,
+        "totalVenta": 80.00
+    },
+    {
+        "id": 8,
+        "cliente": "Lucía Fernández",
+        "producto": "Memoria USB",
+        "cantidad": 3,
+        "totalVenta": 45.00
+    },
+    {
+        "id": 9,
+        "cliente": "Andrés López",
+        "producto": "Tablet",
+        "cantidad": 1,
+        "totalVenta": 250.00
+    },
+    {
+        "id": 10,
+        "cliente": "Laura Sánchez",
+        "producto": "Audífonos",
+        "cantidad": 1,
+        "totalVenta": 60.00
+    },
+    {
+        "id": 11,
+        "cliente": "Roberto Castro",
+        "producto": "Impresora",
+        "cantidad": 1,
+        "totalVenta": 150.00
+    },
+    {
+        "id": 12,
+        "cliente": "Elena Vargas",
+        "producto": "Cámara Web",
+        "cantidad": 1,
+        "totalVenta": 70.00
+    },
+    {
+        "id": 13,
+        "cliente": "Daniela Herrera",
+        "producto": "Smartphone",
+        "cantidad": 1,
+        "totalVenta": 800.00
+    },
+    {
+        "id": 14,
+        "cliente": "Esteban Molina",
+        "producto": "Router Wi-Fi",
+        "cantidad": 1,
+        "totalVenta": 120.00
+    },
+    {
+        "id": 15,
+        "cliente": "Carla Medina",
+        "producto": "Tablet",
+        "cantidad": 1,
+        "totalVenta": 270.00
+    },
+    {
+        "id": 16,
+        "cliente": "Alberto Gutiérrez",
+        "producto": "Monitor",
+        "cantidad": 2,
+        "totalVenta": 600.00
+    },
+    {
+        "id": 17,
+        "cliente": "Gabriela Núñez",
+        "producto": "Teclado",
+        "cantidad": 1,
+        "totalVenta": 55.00
+    },
+    {
+        "id": 18,
+        "cliente": "José Pérez",
+        "producto": "Laptop",
+        "cantidad": 1,
+        "totalVenta": 1100.00
+    },
+    {
+        "id": 19,
+        "cliente": "Patricia Flores",
+        "producto": "Cargador",
+        "cantidad": 2,
+        "totalVenta": 60.00
+    },
+    {
+        "id": 20,
+        "cliente": "Enrique Ríos",
+        "producto": "Audífonos",
+        "cantidad": 2,
+        "totalVenta": 120.00
+    }
+]
