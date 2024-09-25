@@ -35,6 +35,8 @@ conversar(frase('organizar json'), respuesta('¿Cuál es el directorio?')).
 conversar(frase('monitorear json'), respuesta('¿Cuál es el directorio?')).
 conversar(frase('monitoreo json'), respuesta('¿Cuál es el directorio?')).
 conversar(frase('json'), respuesta('¿Cuál es el directorio?')).
+conversar(frase('reportar jsons'), respuesta('¿Cuál es el directorio?')). % Solicita el directorio
+
 
 % busqueda
 preguntaAbierta(Texto, Respuesta) :- Respuesta = Texto.

@@ -13,6 +13,7 @@
   "dependencies": {
     "@hurdlegroup/robotjs": "^0.12.2",
     "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.15",
     "readline": "^1.3.0",
     "robotjs": "^0.6.0",
     "tau-prolog": "^0.3.4"
