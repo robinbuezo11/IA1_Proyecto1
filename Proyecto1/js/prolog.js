@@ -288,5 +288,4 @@ session.consult("./prolog/chatbot.pl", {
     error: (err) => {
         console.error('Error al cargar el archivo Prolog:', err);
     }
-
 });
