@@ -4,8 +4,6 @@ const dotenv = require('dotenv')
 dotenv.config()
 
 const chatBot = (input) => {
-    console.log(`Usuario: ${input}`);
-
     if(input.includes("buscar")) {
         const query = input.split("buscar ")[1];
         searchGoogle(query);

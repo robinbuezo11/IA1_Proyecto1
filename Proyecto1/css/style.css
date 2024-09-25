@@ -1,0 +1,26 @@
+h2,h1{
+    font-size: 300%;
+}
+
+#sendMessage{
+    font-size: 110%;
+}
+
+
+#chatcontainer{
+	overflow: auto;
+	height: 450px;
+	border-radius: 10px;
+}
+
+.send-msg {
+	max-width: 65%; 
+	word-wrap: break-word; 
+	text-align: right;
+}
+
+.receive-msg {
+	max-width: 65%; 
+	word-wrap: break-word; 
+	text-align: left;
+}
