@@ -5,25 +5,48 @@ let inputmsg = document.getElementById("msgs");
 function sendMessage(){
     let msg = $('#msgs').val();
     $('#msgs').val("");
+    sentMessage(msg)
+    updateChat({ user: 2, msg })
+    fetch(`http://localhost:3000/chat`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ question: localStorage.getItem('next'), request: msg })
+    })
+    .then(response => response.json())
+    .then(data => {
+        receivedMessage(data.resp);
+        console.log(data)
+        localStorage.setItem('next', data.next)
+        updateChat({ user: 1, msg: data.resp })
+    })
+    .catch(error => {
+        console.error('Error al consumir la API:', error);
+        receivedMessage("Hubo un error al procesar tu solicitud.");
+        initChat()
+    });
+    $('#chatcontainer').scrollTop($('#chatcontainer')[0].scrollHeight);
+}
+
+function sentMessage(msg) {
     $(`#chat`).append(`
         <li class="list-group-item bg-transparent border-0 p-0">
             <div class="d-flex justify-content-end">
                 <div class="send-msg bg-primary opacity-75 text-light py-2 px-3 my-1">
-                    ${msg}
+                    ${msg.replace('\n', '<br>')}
                 </div>
             </div>
         </li>
     `);
-    receiveMessage("He recibido tu mensaje: " + msg);
-    $('#chatcontainer').scrollTop($('#chatcontainer')[0].scrollHeight);
 }
 
-function receiveMessage(msg){
+function receivedMessage(msg){
     $(`#chat`).append(`
         <li class="list-group-item bg-transparent border-0 p-0">
             <div class="d-flex justify-content-start">
                 <div class="receive-msg bg-secondary text-light py-2 px-3 my-1">
-                    ${msg}
+                    ${msg.replace('\n', '<br>')}
                 </div>
             </div>
         </li>
@@ -40,3 +63,30 @@ inputmsg.addEventListener("keyup", function(event) {
         sendMessage();
     }
 });
+
+//-----------------------------------------------------------
+function initChat() {
+    localStorage.setItem('chat', JSON.stringify([{ user: 1, msg: '¿Cómo puedo ayudarte?' }]))
+    localStorage.setItem('next', '¿Cómo puedo ayudarte?')
+}
+
+function updateChat(msg) {
+    let mensajes = JSON.parse(localStorage.getItem('chat'))
+    mensajes.push(msg)
+    localStorage.setItem('chat', JSON.stringify(mensajes))
+}
+
+if(!localStorage.getItem('chat')) {
+    initChat()
+}
+
+const mensajes = JSON.parse(localStorage.getItem('chat'))
+
+for(const msg_ of mensajes) {
+    const { user, msg } = msg_
+    if(user === 1) {
+        receivedMessage(msg)
+    } else {
+        sentMessage(msg)
+    }
+}

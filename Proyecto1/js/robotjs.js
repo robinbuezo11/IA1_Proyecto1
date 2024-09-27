@@ -15,7 +15,9 @@ const chatBot = (input) => {
 
 const searchGoogle = (query) => {
     robot.keyTap('command');
-    robot.typeString(process.env.BROWSER);
+    setTimeout(() => {
+        robot.typeString(process.env.BROWSER);
+    }, process.env.TYPE_DELAY);
     setTimeout(() => {
         robot.keyTap('enter');
         setTimeout(() => {
@@ -27,7 +29,9 @@ const searchGoogle = (query) => {
 
 const openApplication = (appName) => {
     robot.keyTap('command');
-    robot.typeString(appName);
+    setTimeout(() => {
+        robot.typeString(appName);
+    }, process.env.TYPE_DELAY);
     setTimeout(() => {
         robot.keyTap('enter')
     }, process.env.ENTER_DELAY);
