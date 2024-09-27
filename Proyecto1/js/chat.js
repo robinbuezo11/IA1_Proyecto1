@@ -5,8 +5,15 @@ let inputmsg = document.getElementById("msgs");
 function sendMessage(){
     let msg = $('#msgs').val();
     $('#msgs').val("");
+    if(msg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '') === 'adios') {
+        initChat()
+        $(`#chat`).empty();
+        setTimeout(() => {writeChat()}, 1000)
+        return
+    }
     sentMessage(msg)
     updateChat({ user: 2, msg })
+    msg = msg.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
     fetch(`http://localhost:3000/chat`, {
         method: 'POST',
         headers: {
@@ -80,13 +87,17 @@ if(!localStorage.getItem('chat')) {
     initChat()
 }
 
-const mensajes = JSON.parse(localStorage.getItem('chat'))
+function writeChat() {
+    const mensajes = JSON.parse(localStorage.getItem('chat'))
 
-for(const msg_ of mensajes) {
-    const { user, msg } = msg_
-    if(user === 1) {
-        receivedMessage(msg)
-    } else {
-        sentMessage(msg)
+    for(const msg_ of mensajes) {
+        const { user, msg } = msg_
+        if(user === 1) {
+            receivedMessage(msg)
+        } else {
+            sentMessage(msg)
+        }
     }
 }
+
+writeChat()
